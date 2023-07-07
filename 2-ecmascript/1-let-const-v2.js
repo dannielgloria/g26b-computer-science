@@ -10,7 +10,7 @@ console.log(i);
 */
 
 /*
-// Ejemplo con ley
+// Ejemplo con let
 let i=500;
 for (let i=0; i<=5; i++ ){
 console.log(i);
