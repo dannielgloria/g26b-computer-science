@@ -39,6 +39,9 @@ const suma = (num1, num2) => {
 
 const suma2 = (num1, num2) => num1 + num2;
 
+/**
+ * The function "sayHello" logs a greeting message with the provided name.
+ */
 const sayHello = name => {
   console.log('Hola ', name);
 }

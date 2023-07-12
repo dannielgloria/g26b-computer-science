@@ -20,10 +20,10 @@ let persona = {
 let empleado = Object.create(persona);
 empleado.trabajo = 'Taquero';
 
-let alumno = Object.create(empleado);
+let alumno = Object.create(persona);
 alumno.matricula = '2133010323';
 
-console.log(empleado.nombre);
+/*console.log(empleado.nombre);
 console.log(empleado.edad);
 console.log(empleado.trabajo);
 empleado.saludar();
@@ -32,8 +32,10 @@ console.log(persona.nombre);
 console.log(persona.edad);
 console.log(persona.trabajo);
 persona.saludar();
-
+*/
 console.log(alumno);
+console.log(empleado);
+console.log(persona);
 
 
 
