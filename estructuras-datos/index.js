@@ -10,8 +10,8 @@ let arregloMultidimensionales = [
   [7,8,9]
 ]
 
-console.log(arregloMultidimensionales[0][0])
-console.log(arregloMultidimensionales[2][0])
+// console.log(arregloMultidimensionales[0][0])
+// console.log(arregloMultidimensionales[2][0])
 
 let arregloTridimensional = [
   [
@@ -33,7 +33,7 @@ let arregloTridimensional = [
 
 ]
 
-console.log(arregloTridimensional[0][0][0])
+// console.log(arregloTridimensional[0][0][0])
 
 
 // [Pilas]
@@ -44,7 +44,7 @@ pila.push(8)
 
 pila.pop()
 
-console.log(pila[pila.length - 1])
+// console.log(pila[pila.length - 1])
 
 class Pila {
   constructor(){
@@ -80,14 +80,14 @@ pila1.push(1)
 pila1.push(2)
 pila1.push(3)
 // Imprimimos
-pila1.print()
+// pila1.print()
 // Eliminamos el ultimo dato del arreglo de la pila
-pila1.pop()
+// pila1.pop()
 // Eliminar el ultimo dato del arreglo de la pila y tambien nos va devoler ese dato
-let datoEliminado = pila1.pop();
+// let datoEliminado = pila1.pop();
 
-pila1.print()
-console.log(`Dato eliminado: ${datoEliminado}`)
+// pila1.print()
+// console.log(`Dato eliminado: ${datoEliminado}`)
 
 
 class PilaObjeto {
@@ -124,18 +124,67 @@ class PilaObjeto {
 let pila2 = new PilaObjeto()
 
 // Agregamos datos
-pila2.push("Hola")
+pila2.push("Hola")   //Primer elemento
 pila2.push(true)
 pila2.push(3)
 pila2.push([1,2,3])
 
 // Imprimimos
-pila2.print()
+// pila2.print()
 
 // Eliminamos el ultimo dato del arreglo de la pila
-let valorEliminado2 = pila2.pop()
-console.log(`Valor Objeto eliminado : ${valorEliminado2}`)
+// let valorEliminado2 = pila2.pop()
+// console.log(`Valor Objeto eliminado : ${valorEliminado2}`)
 
-console.log(pila2.peek())
-console.log(pila2.size())
-pila2.print()
+// console.log(pila2.peek())
+// console.log(pila2.size())
+// pila2.print()
+
+// for(let i = 0; i <= pila2.size(); i++){
+//   console.log(`Se elimino el elemento: ${pila2.pop()}`)
+//   if(pila2.size() == 1){
+//     console.log(`El Primer elemento en agregarse y ultimo en eliminarse es: ${pila2.pop()}`)
+//   }
+// }
+
+
+let pilaOriginal = new Pila()
+let pilaAuxiliar = new Pila()
+
+pilaOriginal.push(1)
+pilaOriginal.push(2)
+pilaOriginal.push(3) //3
+pilaOriginal.push(4)
+pilaOriginal.push(5)
+
+
+// pilaOriginal.forEach(element => {
+//     if(element !== 3){
+//       pilaAuxiliar = pilaOriginal.pop()
+//     } else {
+//       let elementoEliminado = pilaOriginal.pop()
+//       console.log(`Se elimino el elemento: ${elementoEliminado}`)
+//       pilaAuxiliar.forEach(element => {
+//         pilaOriginal.push(element)
+//       });
+//     }
+//   }
+// );
+
+for(let i = 0; i < pilaOriginal.size(); i++){
+  if(element !== 3){
+    pilaAuxiliar = pilaOriginal.pop()
+  } else {
+    let elementoEliminado = pilaOriginal.pop()
+    console.log(`Se elimino el elemento: ${elementoEliminado}`)
+    for(let o = 0; o < pilaAuxiliar.size(); o++){
+      pilaOriginal.push(element)
+    }
+  }
+}
+
+
+
+
+
+
