@@ -17,6 +17,9 @@ class Cola {
   }
   // Peek: retornar el primer elemento de la cola, sin quitarlo de la cola
   peek(){
+    if(this.isEmpty()){
+      return "La cola esta vacia"
+    }
     return this.cola[0]
   }
   // Size: retornar el tamaño de la cola
@@ -37,9 +40,14 @@ class Cola {
     console.log(this.cola)
   }
 
-  //front: retorna el primer elemento de la cola
+  //front: retorna el primer elemento de la cola y eliminarlo
   front(){
-    return this.cola[0]
+    if(this.isEmpty()){
+      return "La cola esta vacia"
+    }
+    const frontElement = this.cola[0]
+    this.dequeue() //Eliminar el elemento Frontal de la cola
+    return frontElement
   }
 
   //back: retorna el ultimo elemento de la cola
