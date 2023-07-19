@@ -25,17 +25,36 @@ class LinkedList {
       this.tail = newNode;
     }
   }
+  //Metodo para eliminar un elemento de la lista
+  delete(value) {
+    // Si la lista está vacía, no hay nada que eliminar
+    if(!this.head) return null;
+    // Si el elemento a eliminar es el primero, se reasigna el head
+    if(this.head.value === value) {
+      this.head = this.head.next;
+      return;
+    }
 
+    let current = this.head
+    let previous = null;
+    // Se busca el elemento a eliminar
+    while(current.value !== value) {
+      previous = current
+      current = current.next
+    }
+    // 
+    if(current){
+      previous.next = current.next
+    }
+  }
   // Método para imprimir los elementos de la lista
   print() {
     let current = this.head;
     const elements = [];
-
     while (current) {
       elements.push(current.value);
       current = current.next;
     }
-
     console.log(elements.join(' -> '));
   }
 }
@@ -48,3 +67,5 @@ list.append(3);
 list.append(34);
 list.append(38);
 list.print(); // Salida: 1 -> 2 -> 3
+list.delete(3)
+list.print()
