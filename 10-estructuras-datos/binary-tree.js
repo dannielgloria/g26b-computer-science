@@ -25,13 +25,16 @@ class BinaryTree {
   }
 
   insertNode(node, newNode) {
+    // Si el valor del nuevo nodo es menor al valor del nodo actual
     if (newNode.value < node.value) {
+      // Si no hay un nodo a la izquierda, se agrega el nuevo nodo
       if (!node.left) {
         node.left = newNode;
       } else {
         this.insertNode(node.left, newNode);
       }
     } else {
+      // Si no hay un nodo a la derecha, se agrega el nuevo nodo
       if (!node.right) {
         node.right = newNode;
       } else {
@@ -65,3 +68,5 @@ tree.insert(5);
 tree.insert(7);
 
 tree.printInOrder(); // Salida: 1 2 3 4 5 6 7
+
+console.log(tree)
