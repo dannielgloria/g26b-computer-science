@@ -55,3 +55,4 @@ tree.insert(8);
 tree.traverse(); // Realizamos el recorrido e imprimimos los valores en orden
 
 console.log(tree.root)
+console.log(tree.root.children[2])
