@@ -68,5 +68,6 @@ tree.insert(5);
 tree.insert(7);
 
 tree.printInOrder(); // Salida: 1 2 3 4 5 6 7
-
-console.log(tree)
+console.log(tree); //
+console.log(tree.root.left);
+console.log(tree.root.right); //
