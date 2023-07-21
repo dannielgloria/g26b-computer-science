@@ -32,7 +32,7 @@ function busquedaBinaria(arreglo, target) {
 
 
 const arregloBusqueda = [0, 4, 7, 10, 14, 23, 45, 47, 53];
-const elementoBuscar = 23;
+const elementoBuscar = 3;
 
 const resultIndex = busquedaBinaria(arregloBusqueda, elementoBuscar);
 
