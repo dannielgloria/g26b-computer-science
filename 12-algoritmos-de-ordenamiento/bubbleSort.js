@@ -29,7 +29,7 @@ const sortedArray = bubbleSort(unsortedArray)
 console.log(`Arreglo ordenado: `,sortedArray); // Resultado: [11, 12, 22, 25, 34, 64, 90]
 
 
-function bubbleSortByName(data, prop) {
+function bubbleSortByProp(data, prop) {
   const n = data.length; // Obtener el número total de elementos en la lista.
   for (let i = 0; i < n; i++) {
       // El último i elementos ya están en su posición correcta.
@@ -44,7 +44,7 @@ function bubbleSortByName(data, prop) {
           }
       }
   }
-  return data; // Retorna la lista de objetos ordenada por el campo "name"
+  return data; // Retorna la lista de objetos ordenada por el campo "prop"
 
 }
 
@@ -2617,6 +2617,6 @@ const characters = [
   // }
 ]
 // console.log("characters",characters)
-const arrayCharacters = bubbleSortByName(characters, "yearOfBirth")
+const arrayCharacters = bubbleSortByProp(characters, "yearOfBirth")
 
 console.log("arrayCharacters",arrayCharacters)
