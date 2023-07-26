@@ -29,7 +29,7 @@ const sortedArray = bubbleSort(unsortedArray)
 console.log(`Arreglo ordenado: `,sortedArray); // Resultado: [11, 12, 22, 25, 34, 64, 90]
 
 
-function bubbleSortByName(data) {
+function bubbleSortByName(data, prop) {
   const n = data.length; // Obtener el número total de elementos en la lista.
   for (let i = 0; i < n; i++) {
       // El último i elementos ya están en su posición correcta.
@@ -37,7 +37,7 @@ function bubbleSortByName(data) {
       for (let j = 0; j < n - i - 1; j++) {
           // Bucle interno que recorre la lista de izquierda a derecha hasta el elemento n - i - 1.
           // Si el nombre actual es mayor que el siguiente nombre, intercambiarlos.
-          if (data[j]["name"] > data[j + 1]["name"]) {
+          if (data[j][prop] > data[j + 1][prop]) {
               const temp = data[j]; // Guardar temporalmente el objeto actual en una variable temporal.
               data[j] = data[j + 1]; // Intercambiar el objeto actual con el siguiente objeto en la lista.
               data[j + 1] = temp; // Colocar el objeto temporal en la posición del objeto siguiente, completando el intercambio.
@@ -2617,6 +2617,6 @@ const characters = [
   // }
 ]
 // console.log("characters",characters)
-const arrayCharacters = bubbleSortByName(characters)
+const arrayCharacters = bubbleSortByName(characters, "yearOfBirth")
 
 console.log("arrayCharacters",arrayCharacters)
